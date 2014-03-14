@@ -13,9 +13,6 @@ function init(){
 	// counter
 	initSocket();
 	start();
-
-	props.groovy = document.getElementById('broadcast');
-	setTimeout( animate, 1 );
 }
 
 function start(){
@@ -45,8 +42,9 @@ function nextHour(){
 function startHour(hour){
 	$('.scrollImage').remove();
 	$('#content').append("<img class='scrollImage' src='/images/"+ hour +".gif' height='100%' />");
-	transitionForcer = setInterval(transition,10);
-
+	setTimeout(transition,10);
+	setTimeout(transition,100);
+	setTimeout(transition,200);
 }
 
 function transition() {
